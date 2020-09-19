@@ -1,0 +1,50 @@
+.header {
+	position: sticky;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(var(--default-color), 0.75);
+	border-bottom: 2px solid rgba(var(--light-grey-color), 0.75);
+}
+
+.global-nav {
+	height: 100%;
+	width: 67%;
+	display: flex;
+}
+
+.home-link {
+	display: flex;
+	align-items: center;
+}
+
+.header .categories-list {
+	display: flex;
+	align-items: stretch;
+	margin-left: auto;
+}
+
+.categories-list .nav-links-category {
+	display: flex;
+	gap: 0.4em;
+	align-items: center;
+	font-weight: 500;
+	padding: 1.5em 0;
+	margin-right: 2.1em;
+	cursor: pointer;
+}
+
+.categories-list .nav-links-list {
+	position: absolute;
+	display: none;
+}
+
+.contacts-link {
+	display: flex;
+	align-items: center;
+	padding: 0.65em 1.5em;
+	align-self: center;
+	border: 2px solid rgb(var(--accent-color));
+	border-radius: 100vmax;
+	color: rgb(var(--primary-color));
+}

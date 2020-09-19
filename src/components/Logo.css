@@ -1,0 +1,7 @@
+.newsoft-logo-wrapper {
+	height: 1.5rem;
+}
+
+.newsoft-logo {
+	fill: rgb(var(--primary-color));
+}

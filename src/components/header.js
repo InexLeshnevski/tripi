@@ -1,42 +1,127 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import React from 'react'
+import {Link} from 'gatsby'
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+import Logo from './Logo'
+import ArrowIcon from '../icons/Arrow'
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+import './Header.css'
 
-Header.defaultProps = {
-  siteTitle: ``,
+function Header() {
+	const navLinks = [
+		{
+			category: 'Services',
+			links: [
+				{
+					title: 'Android development',
+					to: '/',
+				},
+				{
+					title: 'iOS development',
+					to: '/',
+				},
+				{
+					title: 'Web development',
+					to: '/',
+				},
+				{
+					title: 'Quality control',
+					to: '/',
+				},
+				{
+					title: 'UI/UX design',
+					to: '/',
+				},
+				{
+					title: 'Dedicated team',
+					to: '/',
+				},
+			]
+		},
+		{
+			category: 'Technologies',
+			links: [
+				{
+					title: 'Android',
+					to: '/',
+				},
+				{
+					title: 'iOS',
+					to: '/',
+				},
+				{
+					title: 'JS',
+					to: '/',
+				},
+				{
+					title: 'Java',
+					to: '/',
+				},
+				{
+					title: 'Python',
+					to: '/',
+				},
+				{
+					title: '.NET',
+					to: '/',
+				},
+			]
+		},
+		{
+			category: 'Company',
+			links: [
+				{
+					title: 'Cooperation models',
+					to: '/',
+				},
+				{
+					title: 'Cooperation methodologies',
+					to: '/',
+				},
+				{
+					title: 'Projects',
+					to: '/',
+				},
+				{
+					title: 'Blog',
+					to: '/',
+				},
+				{
+					title: 'FAQs',
+					to: '/',
+				},
+			]
+		}
+	]
+	
+	const renderedNavLinks = navLinks.map(({category, links}) => (
+		<li key={category} className='nav-links-category'>
+			{category}
+			<ArrowIcon/>
+			<ul className='nav-links-list'>
+				{links.map(({title, to}) => (
+					<li key={title}>
+						<Link to={to}>{title}</Link>
+					</li>
+				))}
+			</ul>
+		</li>
+	))
+
+	return (
+		<header className='header'>
+			<nav className='global-nav'>
+				<Link className='home-link' to='/'>
+					<Logo/>
+				</Link>
+				<ul className='categories-list'>
+					{renderedNavLinks}
+				</ul>
+				<a className='contacts-link button' href='#contact-us'>
+					Contact us
+				</a>
+			</nav>
+		</header>
+	)
 }
 
 export default Header
