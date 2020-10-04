@@ -3,7 +3,8 @@ module.exports = {
     title: `Audio Guiding App — Newsoft`,
     description: `Audio guiding app for a travel company. Made by Newsoft.`,
     author: `Newsoft`,
-  },
+	},
+	pathPrefix: `/tripi`,
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
