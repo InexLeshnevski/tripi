@@ -1,13 +1,19 @@
 @import '../fonts/SFProDisplay/stylesheet.css';
 
 * {
+	-webkit-tap-highlight-color: transparent;
 	color: currentColor;
 	font-family: inherit; 
 	font-size: inherit;
+	overflow-wrap: normal;
+}
+
+*::selection {
+	color: rgb(var(--accent-color));
 }
 
 :root {
-	font-size: 10px;
+	font-size: clamp(9px, 5px + 0.35vw, 10px);
 }
 
 body {
@@ -18,21 +24,289 @@ body {
 	--secondary-color: 140, 140, 140;
 	--light-grey-color: 236, 236, 236;
 
+	--horizontal-margin: 16.5vw;
+	--smaller-h-margin: calc(var(--horizontal-margin) / 2);
+	--vertical-margin: 14.5rem;
+	--smaller-v-margin: calc(var(--vertical-margin) / 1.8);
+	--small-v-margin: calc(var(--vertical-margin) / 2.3);
+	--extrasmall-v-margin: 2em;
+
 	min-height: 100vh;
 	color: rgb(var(--secondary-color));
-	font-family: 'SF Pro Display';
-	font-size: 1.6rem;
+	font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 
+		Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, 
+		Helvetica Neue, sans-serif;
+	font-size: 2.05rem;
 	font-weight: 400;
+	line-height: 1.5;
 }
 
+@media (max-width: 1500px) {
+	body {
+		--horizontal-margin: 13vw;
+	}
+}
+
+@media (max-width: 1300px) {
+	body {
+		--horizontal-margin: 10vw;
+		--smaller-h-margin: calc(var(--horizontal-margin) / 2);
+	}
+}
+
+@media (max-width: 1100px) {
+	body {
+		--smaller-h-margin: var(--horizontal-margin);
+	}
+}
+
+button, button *,
 .button, .button * {
 	font-weight: 500;
 	text-transform: capitalize;
 	transition: 0.3s color, 0.3s background-color;
 	white-space: nowrap;
+	user-select: none;
 }
 
+button:hover,
 .button:hover {
 	background-color: rgb(var(--accent-color));
 	color: rgb(var(--default-color));
 }
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 800;
+	color: rgb(var(--primary-color));
+	line-height: 1.1em;
+} 
+
+h1 {
+	font-size: 8.3rem;
+	line-height: 0.87em;
+	margin: 0 0 var(--smaller-v-margin) var(--smaller-h-margin);
+}
+
+h1 .secondary-text {
+	font-size: 0.75em;
+	font-weight: 400;
+	color: rgb(var(--secondary-color));
+}
+
+h2 {
+	font-size: 6.1rem;
+}
+
+h3 {
+	font-size: 3.1rem;
+	font-weight: 900;
+}
+
+img {
+	object-fit: cover;
+}
+
+li {
+	margin: var(--extrasmall-v-margin) 0;
+}
+
+li:before {
+	content: '•';
+	color: rgb(var(--accent-color));
+	margin-right: 0.5em;
+}
+
+th, td {
+	text-align: left;
+}
+
+.content-section {
+	position: relative;
+	width: 100%;
+	margin: var(--vertical-margin) 0;
+}
+
+.section-content-wrapper {
+	width: 50%;
+}
+
+.section-content-wrapper + .section-content-wrapper {
+	margin-top: var(--vertical-margin);
+}
+
+.section-block:last-of-type .section-content-wrapper {
+	border-bottom: 2px solid rgba(var(--light-grey-color), 0.75);
+}
+
+.section-content-wrapper.align-left {
+	margin-right: auto;
+	padding-left: var(--horizontal-margin);
+}
+
+.section-content-wrapper.align-right {
+	margin-left: auto;
+	padding-right: var(--horizontal-margin);
+}
+
+.section-content-wrapper.align-center {
+	width: auto;
+	margin: 0 var(--horizontal-margin);
+}
+
+@media (max-width: 1000px) {
+	.section-content-wrapper.align-left,
+	.section-content-wrapper.align-right {
+		width: auto;
+		margin: 0 var(--horizontal-margin);
+		padding: 0;
+	}
+}
+
+.section-heading {
+	margin-bottom: var(--small-v-margin);
+}
+
+.section-paragraph {
+	margin: var(--extrasmall-v-margin) 0;
+}
+
+.section-content-wrapper > *:last-child {
+	margin-bottom: var(--smaller-v-margin);
+}
+
+li.emphasized {
+	color: rgb(var(--primary-color));
+	font-weight: 700;
+}
+
+.details-table tr {
+	width: fit-content;
+	display: flex;
+	line-height: 1.25em;
+	padding-top: 0.5em;
+	border-bottom: 2px solid rgba(var(--light-grey-color), 0.7);
+}
+
+.details-table th {
+	min-width: 7em;
+	width: 10vw;
+	font-weight: 400;
+	margin-right: var(--extrasmall-v-margin);
+}
+
+.details-table td {
+	font-weight: 700;
+	color: rgb(var(--primary-color));
+}
+
+.tools-list {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 1em;
+	flex-wrap: wrap;
+}
+
+.tools-list .tool {
+	display: flex;
+	align-items: center;
+	padding: 0.3em 1.15em;
+	margin: 0;
+	border: 2px solid rgba(var(--light-grey-color), 0.7);
+	border-radius: 100vmax;
+	color: rgb(var(--primary-color));
+	text-align: center;
+	vertical-align: middle;
+}
+
+.tools-list .tool:before {
+	content: '';
+	margin: 0;
+}
+
+.features-list .feature:before {
+	content: '';
+	margin: 0;
+}
+
+.map-image {
+	min-width: 500px;
+	width: 46vw;
+	max-width: 800px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: -1;
+}
+
+.svg-icon {
+	fill: none;
+	stroke: rgb(var(--accent-color));
+	stroke-width: 2px;
+	height: 4.3rem;
+	width: 4.3rem;
+}
+
+.section-block.two-col {
+	position: relative;
+	display: flex;
+}
+
+.eiffel-tower-image {
+	position: absolute !important;
+	top: -30px;
+	width: 43vw;
+	z-index: -1;
+}
+
+.development-section 
+.map-illustration-wrapper:first-of-type {
+	top: -280px;
+}
+
+.development-section 
+.map-illustration-wrapper:nth-of-type(2) {
+	top: -100px;
+	right: 0;
+	width: 60vw;
+}
+
+.development-section 
+.map-illustration-wrapper:nth-of-type(2)
+.user-location-wrapper {
+	top: 72%;
+	left: 58%;
+}
+
+.details-section
+.map-illustration-wrapper {
+	top: -450px;
+}
+
+.details-section
+.user-location-wrapper {
+	top: 70%;
+	left: 46%;
+}
+
+.app-screen-wrapper {
+	position: absolute !important;
+	top: -5vw;
+	width: 25vw;
+	filter: drop-shadow(0 0 50px rgba(var(--primary-color), 0.03));
+}
+
+.app-screen-wrapper.align-left {
+	left: var(--horizontal-margin);
+}
+
+.app-screen-wrapper.align-right {
+	right: var(--horizontal-margin);
+}
+
+.app-screen {
+	filter: drop-shadow(0 15px 150px rgba(var(--primary-color), 0.05));
+}
+
+
+

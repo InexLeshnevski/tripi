@@ -1,15 +1,22 @@
 .header {
 	position: sticky;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	background-color: rgba(var(--default-color), 0.75);
 	border-bottom: 2px solid rgba(var(--light-grey-color), 0.75);
+	font-size: 1.6rem;
+	backdrop-filter: blur(50px);
+}
+
+.header li {
+	margin: 0;
+}
+
+.header li:before {
+	display: none;
 }
 
 .global-nav {
 	height: 100%;
-	width: 67%;
+	margin: 0 var(--horizontal-margin);
 	display: flex;
 }
 
@@ -29,8 +36,8 @@
 	gap: 0.4em;
 	align-items: center;
 	font-weight: 500;
-	padding: 1.5em 0;
-	margin-right: 2.1em;
+	padding: 1.25em 0;
+	margin-right: 2em;
 	cursor: pointer;
 }
 
@@ -42,7 +49,7 @@
 .contacts-link {
 	display: flex;
 	align-items: center;
-	padding: 0.65em 1.5em;
+	padding: 0.35em 1.3em;
 	align-self: center;
 	border: 2px solid rgb(var(--accent-color));
 	border-radius: 100vmax;
