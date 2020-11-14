@@ -6,6 +6,8 @@ import SEO from '../components/seo'
 import MapIllustration from '../components/MapIllustration'
 import Feature from '../components/Feature'
 import Image from '../components/Image'
+import ContactForm from '../components/ContactForm'
+import Footer from '../components/Footer'
 
 import TouristsOnMap from '../images/tourists-on-map.png'
 
@@ -100,7 +102,7 @@ const IndexPage = () => {
 						<p className='section-paragraph'>
 							Newsoft’s biggest challenge was to develop instant smooth access to all app features offline. Since Bluetooth reach distance is limited to 100 meters, we implemented mesh communication via BLE (Bluetooth Low Energy). Besides, we developed C++ algorithms for coding and decoding audio messages because BLE’s data rate is rather small. Audio recording and playing are built with C++ as well. Moreover, our developmental solutions guaranteed the following: 
 						</p>
-						<ul>
+						<ul className='bulleted'>
 							<li className='emphasized'>
 								Two-second audio buffer for stable audio play in case of low-quality connection.
 							</li>
@@ -270,6 +272,8 @@ const IndexPage = () => {
 					</div>
 				</div>
 			</section>
+			<ContactForm/>
+			<Footer/>
 		</Layout>
 	)
 }

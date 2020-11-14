@@ -1,0 +1,34 @@
+.contact-info-bar {
+	background-color: rgba(var(--light-grey-color), 0.15);
+	display: flex;
+	padding: 2rem var(--smaller-h-margin);
+	margin-bottom: var(--smaller-v-margin);
+	font-style: none;
+	justify-content: center;
+	align-items: center;
+	border-radius: 100vmax;
+}
+
+.contact-info-bar .contact-info {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.contact-info-bar li {
+	margin: 0;
+}
+
+.contact-info-item {
+	display: flex;
+	align-items: center;
+	font-size: 1.6rem;
+	font-weight: 600;
+	color: rgb(var(--primary-color));
+	gap: 1em;
+}
+
+.contact-info-item .icon {
+	height: 2.5em;
+	stroke: rgb(var(--secondary-color));
+}

@@ -10,11 +10,7 @@
 	margin: 0;
 }
 
-.header li:before {
-	display: none;
-}
-
-.global-nav {
+.header .global-nav {
 	height: 100%;
 	margin: 0 var(--horizontal-margin);
 	display: flex;
@@ -31,7 +27,7 @@
 	margin-left: auto;
 }
 
-.categories-list .nav-links-category {
+.header .nav-links-category {
 	display: flex;
 	gap: 0.4em;
 	align-items: center;
@@ -41,7 +37,13 @@
 	cursor: pointer;
 }
 
-.categories-list .nav-links-list {
+.header .nav-links-category .category-name {
+	margin: 0.2em 0;
+	font-weight: 500;
+	color: currentColor;
+}
+
+.categories-list.dropdown .nav-links-list {
 	position: absolute;
 	display: none;
 }

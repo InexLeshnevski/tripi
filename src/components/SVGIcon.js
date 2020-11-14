@@ -10,7 +10,7 @@ export default function SVGIcon({iconID, className}) {
 	})
 
 	return (
-		<svg className={`svg-icon ${className}`}>
+		<svg className={`icon svg-icon ${className ? className : ''}`}>
 			<use href={src}></use>
 		</svg>
 	)

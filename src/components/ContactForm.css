@@ -1,0 +1,44 @@
+.contact-form-section {
+	position: relative;
+}
+
+.contact-form-section .contact-form {
+	padding: 0 var(--smaller-h-margin);
+	margin-bottom: var(--smaller-v-margin);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.5em 3em;
+}
+
+.contact-form-section .office-on-map {
+	position: absolute;
+	top: 10%;
+	width: 20vw;
+	transform: translateX(-25%);
+	z-index: -1;
+}
+
+.contact-form > * {
+	width: 100%;
+}
+
+.contact-form .message-field {
+	margin-top: 0.5em;
+	grid-column: 1 / -1;
+	border-radius: 0.7em;
+	min-height: 17em;
+	max-height: 25em;
+}
+
+.contact-form .submit-form-btn {
+	grid-column: 1 / -1;
+	width: fit-content;
+	padding: 0.85em 6.5em;
+	margin: 0 auto;
+	border-radius: 100vmax;
+	font-size: 0.8em;
+	font-weight: 700;
+	color: rgb(var(--default-color));
+	background-color: rgb(var(--accent-color));
+	text-transform: uppercase;
+}

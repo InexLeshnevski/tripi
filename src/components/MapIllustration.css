@@ -1,8 +1,18 @@
 .map-illustration-wrapper {
 	position: absolute;
+	top: 50%;
 	height: 57vw;
 	width: 57vw;
+	transform: translateY(-50%);
 	z-index: -1;
+}
+
+@media (max-width: 1000px) {
+	.map-illustration-wrapper {
+		position: relative !important;
+		height: 80vw;
+		width: 80vw;
+	}
 }
 
 .user-location-wrapper {
