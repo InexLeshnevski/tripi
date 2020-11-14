@@ -1,0 +1,85 @@
+[
+	{
+		"category": "Services",
+		"links": [
+			{
+				"title": "Android development",
+				"to": "/"
+			},
+			{
+				"title": "iOS development",
+				"to": "/"
+			},
+			{
+				"title": "Web development",
+				"to": "/"
+			},
+			{
+				"title": "Quality control",
+				"to": "/"
+			},
+			{
+				"title": "UI/UX design",
+				"to": "/"
+			},
+			{
+				"title": "Dedicated team",
+				"to": "/"
+			}
+		]
+	},
+	{
+		"category": "Technologies",
+		"links": [
+			{
+				"title": "Android",
+				"to": "/"
+			},
+			{
+				"title": "iOS",
+				"to": "/"
+			},
+			{
+				"title": "JS",
+				"to": "/"
+			},
+			{
+				"title": "Java",
+				"to": "/"
+			},
+			{
+				"title": "Python",
+				"to": "/"
+			},
+			{
+				"title": ".NET",
+				"to": "/"
+			}
+		]
+	},
+	{
+		"category": "Company",
+		"links": [
+			{
+				"title": "Cooperation models",
+				"to": "/"
+			},
+			{
+				"title": "Cooperation methodologies",
+				"to": "/"
+			},
+			{
+				"title": "Projects",
+				"to": "/"
+			},
+			{
+				"title": "Blog",
+				"to": "/"
+			},
+			{
+				"title": "FAQs",
+				"to": "/"
+			}
+		]
+	}
+]

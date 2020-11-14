@@ -1,0 +1,89 @@
+.footer {
+	position: relative;
+	font-size: 1.4rem;
+	color: rgb(var(--primary-color));
+}
+
+.footer-info {
+	--horizontal-gap: 5vw;
+
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	gap: var(--horizontal-gap);
+}
+
+.footer-info li {
+	margin: 0.8em 0;
+}
+
+.footer .about-company {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	border-right: 2px solid rgba(var(--light-grey-color), 0.3);
+	padding-right: var(--horizontal-gap);
+}
+
+.footer .social-media-links {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex: 1;
+	align-items: flex-end;
+}
+
+.footer .social-media-link {
+	margin: 0;
+}
+
+.footer .social-media-links .icon {
+	height: 2.5em;
+	width: 2.5em;
+	stroke: none;
+	fill: rgb(var(--primary-color));
+	transition: 0.15s;
+}
+
+.footer .social-media-link:hover .icon {
+	fill: rgb(var(--accent-color));
+}
+
+.footer .newsoft-logo-wrapper {
+	margin-bottom: 2em;
+}
+
+.footer .global-nav {
+	flex: 1;
+}
+
+.footer .global-nav .categories-list {
+	display: flex;
+	justify-content: space-between;
+	gap: 5em;
+}
+
+.footer .nav-links-category {
+	margin: 0;
+}
+
+.footer .nav-links-category .category-name {
+	margin: 0 0 1.3em 0;
+	font-size: 1.2em;
+	font-weight: 700;
+}
+
+.footer .award-badge {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 8.5vw;
+	transform: translateX(100%);
+}
+
+.footer .copyright {
+	display: flex;
+	margin: 3em 0 1.5em 0;
+	color: rgb(var(--secondary-color));
+}

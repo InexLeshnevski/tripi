@@ -1,10 +1,25 @@
 @import '../fonts/SFProDisplay/stylesheet.css';
 
+.visually-hidden {
+	position: absolute;
+	height: 1px !important;
+	width: 1px !important;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap; 
+}
+
+::placeholder {
+	opacity: 1;
+}
+
 * {
 	-webkit-tap-highlight-color: transparent;
 	color: currentColor;
 	font-family: inherit; 
 	font-size: inherit;
+	font-style: inherit;
 	overflow-wrap: normal;
 }
 
@@ -13,7 +28,7 @@
 }
 
 :root {
-	font-size: clamp(9px, 5px + 0.35vw, 10px);
+	font-size: clamp(8px, 4px + 0.4vw, 10px);
 }
 
 body {
@@ -50,7 +65,6 @@ body {
 @media (max-width: 1300px) {
 	body {
 		--horizontal-margin: 10vw;
-		--smaller-h-margin: calc(var(--horizontal-margin) / 2);
 	}
 }
 
@@ -110,7 +124,7 @@ li {
 	margin: var(--extrasmall-v-margin) 0;
 }
 
-li:before {
+ul.bulleted li:before {
 	content: '•';
 	color: rgb(var(--accent-color));
 	margin-right: 0.5em;
@@ -118,6 +132,25 @@ li:before {
 
 th, td {
 	text-align: left;
+}
+
+button, input, textarea, select {
+	border: 0;
+	border-radius: 0;
+}
+
+input, select {
+	border-bottom: 2px solid rgb(var(--secondary-color));
+	color: rgb(var(--primary-color));
+	font-weight: 700;
+	padding: 0.3em 0;
+}
+
+textarea {
+	color: rgb(var(--primary-color));
+	padding: 0.7em 1em;
+	border: 2px solid rgb(var(--secondary-color));
+	resize: vertical;
 }
 
 .content-section {
@@ -136,6 +169,12 @@ th, td {
 
 .section-block:last-of-type .section-content-wrapper {
 	border-bottom: 2px solid rgba(var(--light-grey-color), 0.75);
+}
+
+@media (max-width: 1000px) {
+	.section-block {
+		flex-direction: column;
+	}
 }
 
 .section-content-wrapper.align-left {
@@ -259,16 +298,25 @@ li.emphasized {
 	z-index: -1;
 }
 
+@media (max-width: 1000px) {
+	.eiffel-tower-image {
+		position: relative !important;
+		width: 70vw;
+		margin: -5% 0 -10% 0;
+	}
+}
+
 .development-section 
-.map-illustration-wrapper:first-of-type {
-	top: -280px;
+.map-illustration-wrapper:nth-of-type(1) {
+	transform: translateY(-77%);
 }
 
 .development-section 
 .map-illustration-wrapper:nth-of-type(2) {
-	top: -100px;
 	right: 0;
+	height: 60vw;
 	width: 60vw;
+	transform: translateY(-55%);
 }
 
 .development-section 
@@ -280,7 +328,7 @@ li.emphasized {
 
 .details-section
 .map-illustration-wrapper {
-	top: -450px;
+	transform: translateY(-66%);
 }
 
 .details-section
@@ -307,6 +355,3 @@ li.emphasized {
 .app-screen {
 	filter: drop-shadow(0 15px 150px rgba(var(--primary-color), 0.05));
 }
-
-
-
