@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/icons/sprite.svg"],"names":["module","exports"],"mappings":"8EAAAA,EAAOC,QAAU,IAA0B","file":"9-07c962166a59ba1e8ddd.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/sprite-fec0ed272d570be12aa24d93a753c093.svg\";"],"sourceRoot":""}
